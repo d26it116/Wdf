@@ -14,12 +14,17 @@ welcomeMessage();
 
 const themeBtn = document.getElementById("themeBtn");
 
-if (themeBtn) {
+// Apply saved theme
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-theme");
+}
 
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-theme");
-        themeBtn.textContent = "Light Theme";
-    }
+// Update button text
+if (themeBtn) {
+    themeBtn.textContent =
+        document.body.classList.contains("dark-theme")
+            ? "Light Theme"
+            : "Dark Theme";
 
     themeBtn.addEventListener("click", function () {
 
