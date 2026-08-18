@@ -2,117 +2,599 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="stylesheet" href="C:\Users\Aryan\Documents\Charusat\Sem-3\Wdf\StudentHub\css\style.css">
- 
-    <title>StudentHub | Home</title>
-      <link rel="icon" type="image/png" href="C:\Users\Aryan\Documents\Charusat\Sem-3\Wdf\StudentHub\images\Logo.jpg">
+
+    <title>StudentHub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+    </style>
+
 </head>
 
 <body>
-<section class="hero">
 
-    <img src="C:\Users\Aryan\Documents\Charusat\Sem-3\Wdf\StudentHub\images\Student_hub.png" alt="StudentHub College Entrance">
+   
 
-    
-
-</section>
 <header>
 
-    <h1>StudentHub</h1>
+    <div class="logo">
+        <img src="../images/Logo.jpg" alt="StudentHub Logo">
 
-    <nav>
+        <div>
+            <h1>StudentHub</h1>
+            <p>Student Information Portal</p>
+        </div>
+    </div>
 
-        <ul>
+    <button id="menuBtn" class="menu-btn" type="button">
+    ☰
+</button>
 
-<a href="index.html">Home</a> |
-
-<a href="about.html">About</a> |
-
-<a href="dashboard.html">Dashboard</a> |
-
-<a href="contact.html">Contact</a>|
-
-<a href="events.html">Event</a> |
-
-<a href="profile.html">Profile</a> |
-
-<a href="faq.html">Faq</a> |
-
-<a href="admin.html">Admin</a> |
-
-<a href="feedback.html">Feedback</a> |
-
-<a href="#">Logout</a>
-
-        </ul>
-
-    </nav>
+<nav id="mainNav">
+    <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="admin.html">Admin</a></li>
+    </ul>
+</nav>
 
 </header>
 
-<main>
 
-<section>
+    <main id="main-content">
 
-    <h2>Welcome to StudentHub</h2>
+    <section class="hero">
 
-    <p>
-        StudentHub is a centralized academic portal that helps students
-        and faculty manage academic activities efficiently.
-    </p>
+    <img
+        src="../images/Student_hub.png"
+        alt="StudentHub college campus entrance"
+    >
 
-    <a href="login.html">
-        <button>Login</button>
-    </a>
+</section>
+<!-- ================= IMPORTANT LINKS ================= -->
+ <div id="notification">
+    <spam>Workshop Registraion is open</spam>
+    <button id="closebtn" aria-label="Close Notification">×</button>
+</div>
 
-    <a href="register.html">
-        <button>Register</button>
-    </a>
+
+        <h2 id="WelcomeHeading">Welcome to StudentHub</h2>
+        <button id="changeBtn">Change Heading</button>
+        <button id="themeBtn">Dark Theme</button>
+        <button id="openModalBtn">Open Announcement</button>
+ 
+<section class="important-links">
+
+    <div class="section-heading">
+        <span>QUICK ACCESS</span>
+        <h2>Important Links</h2>
+        <p>Access the most useful StudentHub services quickly.</p>
+    </div>
+
+    <div class="links-grid">
+
+        <article class="link-card">
+            <div class="link-icon">🎓</div>
+            <h3>Admission</h3>
+            <p>Start your admission process and explore college programs.</p>
+            <a href="#">Apply Now <span>→</span></a>
+        </article>
+
+        <article class="link-card">
+            <div class="link-icon">📊</div>
+            <h3>Student Dashboard</h3>
+            <p>Access your academic information, assignments and updates.</p>
+            <a href="dashboard.html">Open Dashboard <span>→</span></a>
+        </article>
+
+        <article class="link-card">
+            <div class="link-icon">📅</div>
+            <h3>College Events</h3>
+            <p>Discover workshops, competitions and upcoming campus events.</p>
+            <a href="events.html">Explore Events <span>→</span></a>
+        </article>
+
+        <article class="link-card">
+            <div class="link-icon">💬</div>
+            <h3>Student Feedback</h3>
+            <p>Share your experience and help us improve StudentHub.</p>
+            <a href="feedback.html">Give Feedback <span>→</span></a>
+        </article>
+
+    </div>
 
 </section>
 
-<hr>
 
-<section>
+<!-- ================= ABOUT STUDENTHUB ================= -->
+<section class="home-about">
 
-    <h2>Featured Announcements</h2>
+    <div class="about-content">
 
-    <article>
+        <span class="section-label">ABOUT STUDENTHUB</span>
 
-        <h3>Semester Registration</h3>
-
-        <p>
-            Registration begins from 22 july 2026.
-        </p>
-
-    </article>
-
-    <article>
-
-        <h3>Assignment Submission</h3>
+        <h2>Connecting Students With Their College</h2>
 
         <p>
-            Check the dashboard for recently uploaded assignments.
+            StudentHub is a centralized digital platform designed to make
+            college life easier for students. It brings academic information,
+            announcements, campus activities and student services together
+            in one convenient place.
         </p>
 
-    </article>
+        <div class="about-points">
+
+            <div>
+                <strong>✓ Academic Access</strong>
+                <span>Manage important academic information.</span>
+            </div>
+
+            <div>
+                <strong>✓ Campus Updates</strong>
+                <span>Stay informed about college activities.</span>
+            </div>
+
+            <div>
+                <strong>✓ Student Services</strong>
+                <span>Access useful college services easily.</span>
+            </div>
+
+        </div>
+
+        <a href="about.html" class="primary-btn">
+            Discover More →
+        </a>
+
+    </div>
+
+
+    <div class="about-visual">
+
+        <div class="visual-card">
+
+            <div class="visual-logo">🎓</div>
+
+            <h3>StudentHub</h3>
+
+            <p>Learn. Connect. Grow.</p>
+
+            <div class="visual-line"></div>
+
+            <small>
+                A simple and convenient digital experience
+                for every student.
+            </small>
+
+        </div>
+
+    </div>
 
 </section>
 
-<hr>
+
+<!-- ================= CAMPUS LIFE ================= -->
+<section class="campus-life">
+
+    <div class="section-heading">
+        <span>CAMPUS LIFE</span>
+        <h2>Learn Beyond The Classroom</h2>
+        <p>
+            Discover opportunities that make your college experience
+            meaningful and memorable.
+        </p>
+    </div>
+
+    <div class="campus-grid">
+
+        <article class="campus-card">
+            <div>💻</div>
+            <h3>Technical Activities</h3>
+            <p>
+                Workshops, coding competitions and technology events
+                to develop practical skills.
+            </p>
+        </article>
+
+        <article class="campus-card">
+            <div>🎭</div>
+            <h3>Cultural Activities</h3>
+            <p>
+                Participate in cultural programs, festivals and
+                creative student activities.
+            </p>
+        </article>
+
+        <article class="campus-card">
+            <div>🏆</div>
+            <h3>Sports & Recreation</h3>
+            <p>
+                Take part in sports, tournaments and activities
+                that build teamwork.
+            </p>
+        </article>
+
+    </div>
+
+</section>
 
 
+<!-- ================= CALL TO ACTION ================= -->
+<section class="home-cta">
 
-</main>
+    <div>
+        <span>GET STARTED</span>
 
-<footer>
+        <h2>Your College Journey Starts Here</h2>
 
-    <p>&copy; 2026 StudentHub. All Rights Reserved.</p>
+        <p>
+            Login to StudentHub and stay connected with your
+            academic and campus life.
+        </p>
+    </div>
 
-</footer>
+    <div class="cta-buttons">
 
+        <a href="login.html" class="primary-btn">
+            Student Login
+        </a>
+
+        <a href="register.html" class="secondary-btn">
+            Register Now
+        </a>
+
+    </div>
+
+</section>
+
+
+        <!-- ================= ABOUT STUDENTHUB ================= -->
+
+        <section class="home-about">
+
+            <div>
+
+                <p class="section-label">
+                    ABOUT STUDENTHUB
+                </p>
+
+                <h2>
+                    Connecting Students With Their College
+                </h2>
+
+                <p>
+                    StudentHub is a centralized digital platform designed
+                    to make college life easier for students. It brings
+                    academic information, announcements, campus activities
+                    and student services together in one place.
+                </p>
+
+                <a href="about.html">
+
+                    <button>
+                        Discover More
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <aside class="about-highlight">
+
+                <h3>StudentHub</h3>
+
+                <p>
+                    Learn. Connect. Grow.
+                </p>
+
+                <hr>
+
+                <p>
+                    A simple and convenient digital experience
+                    for every student.
+                </p>
+
+            </aside>
+
+        </section>
+
+
+        <!-- ================= CAMPUS HIGHLIGHTS ================= -->
+
+        <section>
+
+            <p class="section-label">
+                CAMPUS LIFE
+            </p>
+
+            <h2>Experience College Life</h2>
+
+            <div class="dashboard-grid">
+
+
+                <article class="card">
+
+                    <h3>📖 Learning</h3>
+
+                    <p>
+                        Build knowledge through academic resources,
+                        practical learning and projects.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🤝 Community</h3>
+
+                    <p>
+                        Connect with students, faculty and the
+                        wider college community.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🏆 Activities</h3>
+
+                    <p>
+                        Participate in technical, cultural and
+                        extracurricular activities.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="announcement-section">
+
+    <div class="section-heading">
+        <div>
+            <span class="section-label">NOTICE BOARD</span>
+            <h2>Latest Announcements</h2>
+            <p>Stay updated with important college information.</p>
+        </div>
+
+        <a href="dashboard.html" class="view-all">
+            View All →
+        </a>
+    </div>
+
+
+    <div class="announcement-grid">
+
+        <article class="announcement-card">
+
+            <div class="announcement-date">
+                <span>22</span>
+                <small>JUL</small>
+            </div>
+
+            <div class="announcement-content">
+
+                <span class="announcement-tag academic">
+                    Academic
+                </span>
+
+                <h3>Semester Registration</h3>
+
+                <p>
+                    Semester registration process has started for
+                    students. Complete your registration before the
+                    deadline.
+                </p>
+
+                <a href="dashboard.html" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="announcement-card">
+
+            <div class="announcement-date">
+                <span>25</span>
+                <small>JUL</small>
+            </div>
+
+            <div class="announcement-content">
+
+                <span class="announcement-tag assignment">
+                    Assignment
+                </span>
+
+                <h3>Assignment Submission</h3>
+
+                <p>
+                    Students can check the dashboard for recently
+                    uploaded assignments and submission deadlines.
+                </p>
+
+                <a href="dashboard.html" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="announcement-card">
+
+            <div class="announcement-date">
+                <span>28</span>
+                <small>JUL</small>
+            </div>
+
+            <div class="announcement-content">
+
+                <span class="announcement-tag event">
+                    Event
+                </span>
+
+                <h3>College Technical Event</h3>
+
+                <p>
+                    Participate in upcoming technical activities,
+                    workshops and student competitions.
+                </p>
+
+                <a href="events.html" class="read-more">
+                    View Events →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+        <!-- ================= CTA ================= -->
+
+      <section class="cta-section">
+
+    <div class="cta-content">
+
+        <span class="section-label">GET STARTED</span>
+
+        <h2>Ready to Begin?</h2>
+
+        <p>
+            Access your StudentHub account and stay connected
+            with your college.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="login.html" class="cta-primary">
+                Login to StudentHub
+            </a>
+
+            <a href="register.html" class="cta-secondary">
+                Create Account
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="cta-icon">
+        🎓
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <h3>StudentHub</h3>
+
+            <p>
+                Your digital connection to college life,
+                academics and student services.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="faq.html">FAQ</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>Surat, Gujarat</p>
+
+            <p>info@studenthub.com</p>
+
+            <p>+91 98765 43210</p>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 StudentHub. All Rights Reserved.
+        </p>
+
+    </footer>
+    <div id="announcementModal" class="modal">
+
+    <div class="modal-content">
+
+        <button id="closeModalBtn" class="close-modal">×</button>
+
+        <span class="modal-label">ANNOUNCEMENT</span>
+
+        <h2>Workshop Registration is Open!</h2>
+
+        <p>
+            Registration for the upcoming student workshop is now open.
+            Students are requested to register before the deadline.
+        </p>
+
+        <button id="modalOkBtn" class="modal-ok">
+            Okay
+        </button>
+
+    </div>
+
+</div>
+<script src="../js/script.js"></script>
 </body>
+
 </html>

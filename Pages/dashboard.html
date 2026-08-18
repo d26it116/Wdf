@@ -3,155 +3,462 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="../images/Logo.jpg">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>StudentHub | Dashboard</title>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
-    <h1>Student Dashboard</h1>
+    <div class="logo">
 
-    <nav>
-       <a href="index.html">Home</a> |
+        <img src="../images/Logo.jpg"
+             alt="StudentHub Logo">
 
-<a href="about.html">About</a> |
+        <div>
+            <h1>StudentHub</h1>
+            <p>Student Information Portal</p>
+        </div>
 
-<a href="dashboard.html">Dashboard</a> |
+    </div>
 
-<a href="contact.html">Contact</a>|
+  <button id="menuBtn" class="menu-btn" type="button">
+    ☰
+</button>
 
-<a href="events.html">Event</a> |
-
-<a href="profile.html">Profile</a> |
-
-<a href="faq.html">Faq</a> |
-
-<a href="admin.html">Admin</a> |
-
-<a href="feedback.html">Feedback</a> |
-
-<a href="#">Logout</a>
-    </nav>
+<nav id="mainNav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="admin.html">Admin</a></li>
+    </ul>
+</nav>
 
 </header>
 
-<main>
 
-<section>
+<!-- ================= MAIN ================= -->
 
-    <h2>Welcome, Aaryan</h2>
+<main class="dashboard-page">
 
-    <p>Department: Information Technology</p>
 
-    <p>Semester: 3</p>
+    <!-- Welcome Section -->
 
-    <p>Enrollment No: D26IT116</p>
+    <section class="dashboard-welcome">
 
-</section>
+        <p class="section-label">
+            STUDENT DASHBOARD
+        </p>
 
-<hr>
+        <h2>
+            Welcome back, Student!
+        </h2>
 
-<section>
+        <p>
+            Manage your academic activities, assignments
+            and college updates from one place.
+        </p>
 
-    <h2>Attendance Summary</h2>
+        <br>
 
-    <table border="1" cellpadding="8">
+        <a href="profile.html">
+            <button type="button">
+                View Profile
+            </button>
+        </a>
 
-        <tr>
-            <th>Subject</th>
-            <th>Attendance</th>
-        </tr>
+    </section>
 
-        <tr>
-            <td>Web Development</td>
-            <td>92%</td>
-        </tr>
 
-        <tr>
-            <td>Java Programming</td>
-            <td>88%</td>
-        </tr>
 
-        <tr>
-            <td>Discrete Mathematics</td>
-            <td>90%</td>
-        </tr>
+    <!-- Academic Overview -->
 
-    </table>
+    <section>
 
-</section>
+        <p class="section-label">
+            ACADEMIC INFORMATION
+        </p>
 
-<hr>
+        <h2>
+            Academic Overview
+        </h2>
 
-<section>
+        <br>
 
-    <h2>Recent Assignments</h2>
 
-    <article>
+        <div class="dashboard-grid">
 
-        <h3>WDF Practical</h3>
 
-        <p>Submission Date: 1 August 2026</p>
+            <article class="card">
 
-    </article>
+                <span>📚</span>
 
-    <article>
+                <h3>
+                    Current Semester
+                </h3>
 
-        <h3>Java Practical</h3>
+                <strong>
+                    Semester 3
+                </strong>
 
-        <p>Submission Date: 1 August 2026</p>
+                <p>
+                    Currently enrolled semester
+                </p>
 
-    </article>
+            </article>
 
-</section>
 
-<hr>
 
-<section>
+            <article class="card">
 
-    <h2>Latest Announcements</h2>
+                <span>📊</span>
 
-    <ul>
+                <h3>
+                    Attendance
+                </h3>
 
-        <li>Semester registration starts on 22 July 2026.</li>
+                <strong>
+                    87%
+                </strong>
 
-        <li>Internal exam timetable has been published.</li>
+                <p>
+                    Overall attendance
+                </p>
 
-        <li>Practical exams will be held in the upcoming week.</li>
+            </article>
 
-    </ul>
 
-</section>
 
-<hr>
+            <article class="card">
 
-<aside>
+                <span>📝</span>
 
-    <h3>Quick Links</h3>
+                <h3>
+                    Assignments
+                </h3>
 
-    <ul>
+                <strong>
+                    4 Pending
+                </strong>
 
-        <li><a href="#">Study Materials</a></li>
+                <p>
+                    Assignments waiting for submission
+                </p>
 
-        <li><a href="#">Assignments</a></li>
+            </article>
 
-        <li><a href="#">Attendance</a></li>
 
-        <li><a href="#">Results</a></li>
 
-    </ul>
+            <article class="card">
 
-</aside>
+                <span>📅</span>
+
+                <h3>
+                    Upcoming Events
+                </h3>
+
+                <strong>
+                    3 Events
+                </strong>
+
+                <p>
+                    Events happening this month
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Recent Assignments -->
+
+    <section>
+
+        <p class="section-label">
+            ACADEMIC WORK
+        </p>
+
+        <h2>
+            Recent Assignments
+        </h2>
+
+        <br>
+
+
+        <div class="dashboard-grid">
+
+
+            <article class="card">
+
+                <h3>
+                    Data Structures
+                </h3>
+
+                <p>
+                    Linked List Implementation
+                </p>
+
+                <br>
+
+                <strong>
+                    Pending
+                </strong>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <h3>
+                    Computer Networks
+                </h3>
+
+                <p>
+                    ALOHA Protocol Assignment
+                </p>
+
+                <br>
+
+                <strong>
+                    Pending
+                </strong>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Responsive Website Design
+                </p>
+
+                <br>
+
+                <strong>
+                    Completed
+                </strong>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Today's Classes -->
+
+    <section>
+
+        <p class="section-label">
+            TODAY
+        </p>
+
+        <h2>
+            Today's Classes
+        </h2>
+
+        <br>
+
+
+        <div class="dashboard-grid">
+
+
+            <article class="card">
+
+                <span>💻</span>
+
+                <h3>
+                    Data Structures
+                </h3>
+
+                <p>
+                    09:00 AM – 10:00 AM
+                </p>
+
+                <small>
+                    Room 301
+                </small>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <span>🌐</span>
+
+                <h3>
+                    Computer Networks
+                </h3>
+
+                <p>
+                    11:00 AM – 12:00 PM
+                </p>
+
+                <small>
+                    Room 204
+                </small>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <span>💻</span>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    02:00 PM – 03:00 PM
+                </p>
+
+                <small>
+                    Computer Lab
+                </small>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
 
 </main>
 
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-    <p>&copy; 2026 StudentHub</p>
+    <div>
+
+        <h3>
+            StudentHub
+        </h3>
+
+        <p>
+            A centralized college student information
+            portal for academic and campus activities.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Quick Links
+        </h3>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="events.html">
+                    Events
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Student Services
+        </h3>
+
+        <ul>
+
+            <li>
+                <a href="profile.html">
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="faq.html">
+                    FAQ
+                </a>
+            </li>
+
+            <li>
+                <a href="feedback.html">
+                    Feedback
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+        &copy; 2026 StudentHub. All Rights Reserved.
+    </p>
 
 </footer>
-
+<script src="../js/script.js"></script>
 </body>
 </html>

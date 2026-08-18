@@ -2,144 +2,515 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="../images/Logo.jpg">
+
+    <link rel="stylesheet" href="../css/style.css">
+
     <title>StudentHub | Events</title>
+
 </head>
+
 
 <body>
 
+
+<!-- ================= HEADER ================= -->
+
 <header>
 
-    <h1>StudentHub</h1>
+    <div class="logo">
 
-    <nav>
-     <a href="index.html">Home</a> |
+        <img src="../images/Logo.jpg"
+             alt="StudentHub Logo">
 
-<a href="about.html">About</a> |
+        <div>
 
-<a href="dashboard.html">Dashboard</a> |
+            <h1>
+                StudentHub
+            </h1>
 
-<a href="contact.html">Contact</a>|
+            <p>
+                Student Information Portal
+            </p>
 
-<a href="events.html">Event</a> |
+        </div>
 
-<a href="profile.html">Profile</a> |
+    </div>
 
-<a href="faq.html">Faq</a> |
 
-<a href="admin.html">Admin</a> |
+     <button id="menuBtn" class="menu-btn" type="button">
+    ☰
+</button>
 
-<a href="feedback.html">Feedback</a> |
-
-<a href="#">Logout</a>
-    </nav>
+<nav id="mainNav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="events.html" aria-current="page">Events</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="admin.html">Admin</a></li>
+    </ul>
+</nav>
 
 </header>
 
+
+
+<!-- ================= MAIN ================= -->
+
 <main>
 
-<section>
 
-    <h2>Upcoming College Events</h2>
+    <!-- Page Introduction -->
 
-    <p>
-        Stay updated with workshops, seminars, hackathons and cultural events.
-    </p>
+    <section>
 
-</section>
+        <p class="section-label">
+            CAMPUS ACTIVITIES
+        </p>
 
-<hr>
+        <h2>
+            College Events
+        </h2>
 
-<section>
+        <p>
+            Discover workshops, seminars, competitions
+            and cultural activities happening across
+            the campus.
+        </p>
 
-    <article>
+    </section>
 
-        <h3>Web Development Framework</h3>
 
-        <p><strong>Date:</strong> 10 August 2026</p>
 
-        <p><strong>Time:</strong> 10:00 AM</p>
+    <!-- Event Categories -->
 
-        <p><strong>Venue:</strong>LAB 613-B</p>
+    <section>
 
-    </article>
+        <p class="section-label">
+            EXPLORE
+        </p>
 
-    <hr>
+        <h2>
+            Explore Events
+        </h2>
 
-    <article>
+        <br>
 
-        <h3>Object Oriented Programming Seminar</h3>
 
-        <p><strong>Date:</strong> 18 August 2026</p>
+        <div class="event-container">
 
-        <p><strong>Time:</strong> 12:10 AM</p>
 
-        <p><strong>Venue:</strong>LAB 628-B</p>
+            <article class="event-card">
 
-    </article>
+                <span>
+                    💻
+                </span>
 
-    <hr>
+                <h3>
+                    Technical
+                </h3>
 
-    <article>
+                <p>
+                    Workshops, coding competitions and
+                    technology sessions.
+                </p>
 
-        <h3>Hackathon 2026</h3>
+            </article>
 
-        <p><strong>Date:</strong> 25 August 2026</p>
 
-        <p><strong>Time:</strong> 9:00 AM</p>
 
-        <p><strong>Venue:</strong> Innovation Center</p>
+            <article class="event-card">
 
-    </article>
+                <span>
+                    🎭
+                </span>
 
-</section>
+                <h3>
+                    Cultural
+                </h3>
 
-<hr>
+                <p>
+                    Cultural programs, festivals and
+                    student performances.
+                </p>
 
-<section>
+            </article>
 
-    <h2>Event Schedule</h2>
 
-    <table border="1" cellpadding="8">
 
-        <tr>
-            <th>Event</th>
-            <th>Date</th>
-            <th>Coordinator</th>
-        </tr>
+            <article class="event-card">
 
-        <tr>
-            <td>Workshop</td>
-            <td>10 Aug</td>
-            <td>Prof. Mehta</td>
-        </tr>
+                <span>
+                    🏆
+                </span>
 
-        <tr>
-            <td>Seminar</td>
-            <td>18 Aug</td>
-            <td>Prof. Shah</td>
-        </tr>
+                <h3>
+                    Sports
+                </h3>
 
-        <tr>
-            <td>Hackathon</td>
-            <td>25 Aug</td>
-            <td>Prof. Patel</td>
-        </tr>
+                <p>
+                    Tournaments and sports activities
+                    for students.
+                </p>
 
-    </table>
+            </article>
 
-</section>
+
+
+            <article class="event-card">
+
+                <span>
+                    🎤
+                </span>
+
+                <h3>
+                    Seminars
+                </h3>
+
+                <p>
+                    Guest lectures and expert sessions
+                    from industry professionals.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Upcoming Events -->
+
+    <section>
+
+        <p class="section-label">
+            DON'T MISS OUT
+        </p>
+
+        <h2>
+            Upcoming Events
+        </h2>
+
+        <p>
+            Join the activities and make your college
+            experience more memorable.
+        </p>
+
+        <br>
+
+
+        <div class="event-container">
+
+
+            <!-- Event 1 -->
+
+            <article class="event-card">
+
+                <p class="section-label">
+                    TECHNICAL
+                </p>
+
+                <h3>
+                    CodeCraft Hackathon
+                </h3>
+
+                <strong>
+                    18 AUG 2026
+                </strong>
+
+                <p>
+                    A 24-hour coding challenge where
+                    students solve real-world problems
+                    using technology.
+                </p>
+
+                <br>
+
+                <button type="button">
+                    View Event
+                </button>
+
+            </article>
+
+
+
+            <!-- Event 2 -->
+
+            <article class="event-card">
+
+                <p class="section-label">
+                    CULTURAL
+                </p>
+
+                <h3>
+                    Campus Fest
+                </h3>
+
+                <strong>
+                    25 AUG 2026
+                </strong>
+
+                <p>
+                    Enjoy music, performances,
+                    competitions and student activities.
+                </p>
+
+                <br>
+
+                <button type="button">
+                    View Event
+                </button>
+
+            </article>
+
+
+
+            <!-- Event 3 -->
+
+            <article class="event-card">
+
+                <p class="section-label">
+                    SPORTS
+                </p>
+
+                <h3>
+                    Inter College Tournament
+                </h3>
+
+                <strong>
+                    30 AUG 2026
+                </strong>
+
+                <p>
+                    Participate in exciting sports
+                    competitions across the campus.
+                </p>
+
+                <br>
+
+                <button type="button">
+                    View Event
+                </button>
+
+            </article>
+
+
+
+            <!-- Event 4 -->
+
+            <article class="event-card">
+
+                <p class="section-label">
+                    SEMINAR
+                </p>
+
+                <h3>
+                    Industry Expert Talk
+                </h3>
+
+                <strong>
+                    05 SEP 2026
+                </strong>
+
+                <p>
+                    Learn about current industry trends
+                    from experienced professionals.
+                </p>
+
+                <br>
+
+                <button type="button">
+                    View Event
+                </button>
+
+            </article>
+
+
+
+            <!-- Event 5 -->
+
+            <article class="event-card">
+
+                <p class="section-label">
+                    WORKSHOP
+                </p>
+
+                <h3>
+                    Web Development Workshop
+                </h3>
+
+                <strong>
+                    10 SEP 2026
+                </strong>
+
+                <p>
+                    Learn modern web development concepts
+                    and build your first responsive website.
+                </p>
+
+                <br>
+
+                <button type="button">
+                    View Event
+                </button>
+
+            </article>
+
+
+
+            <!-- Event 6 -->
+
+            <article class="event-card">
+
+                <p class="section-label">
+                    STUDENT ACTIVITY
+                </p>
+
+                <h3>
+                    Student Innovation Day
+                </h3>
+
+                <strong>
+                    15 SEP 2026
+                </strong>
+
+                <p>
+                    Present innovative ideas and projects
+                    with other students.
+                </p>
+
+                <br>
+
+                <button type="button">
+                    View Event
+                </button>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
 
 </main>
 
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-<hr>
+    <div>
 
-<p>&copy; 2026 StudentHub | All Rights Reserved</p>
+        <h3>
+            StudentHub
+        </h3>
+
+        <p>
+            A centralized college student information
+            portal for academic and campus activities.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Quick Links
+        </h3>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Student Services
+        </h3>
+
+        <ul>
+
+            <li>
+                <a href="profile.html">
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="faq.html">
+                    FAQ
+                </a>
+            </li>
+
+            <li>
+                <a href="feedback.html">
+                    Feedback
+                </a>
+            </li>
+
+            <li>
+                <a href="admin.html">
+                    Admin
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+        &copy; 2026 StudentHub. All Rights Reserved.
+    </p>
 
 </footer>
 
+<script src="../js/script.js"></script>
 </body>
 </html>

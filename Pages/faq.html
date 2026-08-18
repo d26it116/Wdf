@@ -2,110 +2,487 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>StudentHub | FAQ</title>
+
+    <link rel="icon" type="image/png" href="../images/Logo.jpg">
+
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
 
-<header>
+    <!-- ================= HEADER ================= -->
 
-    <h1>Frequently Asked Questions</h1>
+    <header>
 
-    <nav>
+        <div class="logo">
 
-     <a href="index.html">Home</a> |
+            <img src="../images/Logo.jpg" alt="StudentHub Logo">
 
-<a href="about.html">About</a> |
+            <div>
+                <h1>StudentHub</h1>
+                <p>Student Information Portal</p>
+            </div>
 
-<a href="dashboard.html">Dashboard</a> |
+        </div>
 
-<a href="contact.html">Contact</a>|
 
-<a href="events.html">Event</a> |
+        <button id="menuBtn" class="menu-btn" type="button">
+    ☰
+</button>
 
-<a href="profile.html">Profile</a> |
+<nav id="mainNav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="admin.html">Admin</a></li>
+    </ul>
+</nav>
 
-<a href="faq.html">Faq</a> |
+    </header>
 
-<a href="admin.html">Admin</a> |
 
-<a href="feedback.html">Feedback</a> |
+    <!-- ================= MAIN ================= -->
 
-<a href="#">Logout</a>
+    <main class="faq-page">
 
-    </nav>
 
-</header>
+        <!-- ================= FAQ HERO ================= -->
 
-<main>
+        <section class="faq-hero">
 
-<section>
+            <p class="section-label">
+                HELP CENTER
+            </p>
 
-<h2>General Questions</h2>
+            <h2>Frequently Asked Questions</h2>
 
-<article>
+            <p>
+                Find quick answers to common questions about
+                StudentHub, academics, events and student services.
+            </p>
 
-<h3>1. What is StudentHub?</h3>
+        </section>
 
-<p>
-StudentHub is an online academic portal for students and faculty.
-</p>
 
-</article>
+        <!-- ================= GENERAL FAQ ================= -->
 
-<article>
+        <section class="faq-section">
 
-<h3>2. How can I register?</h3>
+            <div class="faq-heading">
 
-<p>
-Go to the Register page and complete the registration form.
-</p>
+                <p class="section-label">
+                    STUDENTHUB
+                </p>
 
-</article>
+                <h2>General Questions</h2>
 
-<article>
+            </div>
 
-<h3>3. How do I view attendance?</h3>
 
-<p>
-Login to your account and open the Dashboard page.
-</p>
+            <div class="faq-list">
 
-</article>
 
-<article>
+                <details>
 
-<h3>4. Where can I download study materials?</h3>
+                    <summary>
+                        What is StudentHub?
+                    </summary>
 
-<p>
-Study materials are available in the student dashboard after login.
-</p>
+                    <p>
+                        StudentHub is a centralized student portal
+                        that provides access to academic information,
+                        announcements, events, student profiles and
+                        other college services.
+                    </p>
 
-</article>
+                </details>
 
-<article>
 
-<h3>5. Who can upload assignments?</h3>
+                <details>
 
-<p>
-Only faculty members and administrators can upload assignments.
-</p>
+                    <summary>
+                        Who can use StudentHub?
+                    </summary>
 
-</article>
+                    <p>
+                        Students, teachers, faculty members and
+                        authorized college administrators can use
+                        StudentHub according to their assigned roles.
+                    </p>
 
-</section>
+                </details>
 
-</main>
 
-<footer>
+                <details>
 
-<hr>
+                    <summary>
+                        How do I create a StudentHub account?
+                    </summary>
 
-<p>&copy; 2026 StudentHub</p>
+                    <p>
+                        Visit the Registration page and enter your
+                        required student information. After completing
+                        registration, you can use your account to access
+                        the StudentHub portal.
+                    </p>
 
-</footer>
+                </details>
 
+
+                <details>
+
+                    <summary>
+                        Is StudentHub available on mobile devices?
+                    </summary>
+
+                    <p>
+                        Yes. StudentHub is designed using responsive
+                        layouts so that students can access the portal
+                        from desktops, tablets and mobile devices.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACADEMIC FAQ ================= -->
+
+        <section class="faq-section">
+
+            <div class="faq-heading">
+
+                <p class="section-label">
+                    ACADEMICS
+                </p>
+
+                <h2>Academic Questions</h2>
+
+            </div>
+
+
+            <div class="faq-list">
+
+                <details>
+
+                    <summary>
+                        Where can I view my academic information?
+                    </summary>
+
+                    <p>
+                        You can view your academic information from
+                        your Dashboard or Profile page after logging
+                        into StudentHub.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Where can I find assignments?
+                    </summary>
+
+                    <p>
+                        Available assignments can be accessed through
+                        the academic Dashboard. Your teachers can upload
+                        new assignments and provide submission details.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Can I check my attendance?
+                    </summary>
+
+                    <p>
+                        Yes. Attendance information can be displayed
+                        on your Dashboard when it has been updated by
+                        the respective faculty member.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Where can I find college announcements?
+                    </summary>
+
+                    <p>
+                        Important announcements can be displayed on
+                        the StudentHub Home page and Dashboard.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EVENTS FAQ ================= -->
+
+        <section class="faq-section">
+
+            <div class="faq-heading">
+
+                <p class="section-label">
+                    CAMPUS LIFE
+                </p>
+
+                <h2>Events & Activities</h2>
+
+            </div>
+
+
+            <div class="faq-list">
+
+                <details>
+
+                    <summary>
+                        Where can I see upcoming college events?
+                    </summary>
+
+                    <p>
+                        Visit the Events page to view upcoming
+                        technical, cultural, sports and other
+                        college activities.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        How can I register for an event?
+                    </summary>
+
+                    <p>
+                        Open the Events page, select the event you
+                        are interested in and use the registration
+                        option provided for that event.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Can students participate in multiple events?
+                    </summary>
+
+                    <p>
+                        Students can participate in multiple events
+                        depending on the event schedule and the
+                        registration requirements.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACCOUNT FAQ ================= -->
+
+        <section class="faq-section">
+
+            <div class="faq-heading">
+
+                <p class="section-label">
+                    ACCOUNT
+                </p>
+
+                <h2>Account & Support</h2>
+
+            </div>
+
+
+            <div class="faq-list">
+
+                <details>
+
+                    <summary>
+                        I forgot my password. What should I do?
+                    </summary>
+
+                    <p>
+                        Use the password recovery option on the
+                        Login page. If you still cannot access your
+                        account, contact the StudentHub support team.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        How can I update my profile information?
+                    </summary>
+
+                    <p>
+                        Open your Profile page and select the
+                        Edit Profile option to update information
+                        that you are allowed to change.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        How can I contact StudentHub support?
+                    </summary>
+
+                    <p>
+                        Visit the Contact page to find the support
+                        email address, phone number and department
+                        contact information.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STILL HAVE QUESTION ================= -->
+
+        <section class="faq-contact">
+
+            <div>
+
+                <p class="section-label">
+                    STILL NEED HELP?
+                </p>
+
+                <h2>Didn't Find Your Answer?</h2>
+
+                <p>
+                    Our StudentHub support team is ready to help
+                    you with your questions.
+                </p>
+
+            </div>
+
+            <a href="contact.html">
+                <button>
+                    Contact Support
+                </button>
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <h3>StudentHub</h3>
+
+            <p>
+                Your digital connection to college life,
+                academics and student services.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Support</h3>
+
+            <p>info@studenthub.com</p>
+
+            <p>+91 98765 43210</p>
+
+            <p>Surat, Gujarat</p>
+
+        </div>
+
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 StudentHub. All Rights Reserved.
+        </p>
+
+    </footer>
+<script>
+const faqs = document.querySelectorAll(".faq-list details");
+
+faqs.forEach(function (faq) {
+    faq.addEventListener("toggle", function () {
+        if (faq.open) {
+            faqs.forEach(function (otherFaq) {
+                if (otherFaq !== faq) {
+                    otherFaq.open = false;
+                }
+            });
+        }
+    });
+});
+</script>
+<script src="../js/script.js"></script>
 </body>
+
 </html>

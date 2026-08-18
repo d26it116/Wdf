@@ -2,141 +2,565 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>StudentHub | Admin</title>
+
+        <link rel="icon" type="image/png" href="../images/Logo.jpg">
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-<header>
+    <!-- ================= HEADER ================= -->
 
-    <h1>StudentHub Admin Panel</h1>
+    <header>
 
-    <nav>
-     <a href="index.html">Home</a> |
+        <div class="logo">
 
-    <a href="about.html">About</a> |
+            <img src="../images/Logo.jpg" alt="StudentHub Logo">
 
-    <a href="dashboard.html">Dashboard</a>
+            <div>
+                <h1>StudentHub</h1>
+                <p>Student Information Portal</p>
+            </div>
 
-    <a href="contact.html">Contact</a>|
+        </div>
 
-    <a href="events.html">Event</a> |
 
-    <a href="profile.html">Profile</a> |
+         <button id="menuBtn" class="menu-btn" type="button">
+    ☰
+</button>
 
-    <a href="faq.html">Faq</a> |
+<nav id="mainNav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="admin.html" aria-current="page">Admin</a></li>
+    </ul>
+</nav>
 
-    <a href="admin.html">Admin</a> |
+    </header>
 
-    <a href="feedback.html">Feedback</a> |
 
-    <a href="#">Logout</a>
-    </nav>
+    <!-- ================= MAIN ================= -->
 
-</header>
+    <main class="admin-page">
 
-<main>
 
-<section>
+        <!-- ================= ADMIN HEADER ================= -->
 
-    <h2>Administrator Dashboard</h2>
+        <section class="admin-hero">
 
-    <p>Welcome, Admin. Manage students, faculty and academic activities.</p>
+            <div>
 
-</section>
+                <p class="section-label">
+                    ADMINISTRATION
+                </p>
 
-<hr>
+                <h2>Admin Dashboard</h2>
 
-<section>
+                <p>
+                    Manage students, announcements, events and
+                    other StudentHub activities from one place.
+                </p>
 
-    <h2>Management Modules</h2>
+            </div>
 
-    <article>
+            <div class="admin-profile">
 
-        <h3>Student Management</h3>
+                <span>👨‍💼</span>
 
-        <ul>
-            <li>Add Student</li>
-            <li>Update Student Details</li>
-            <li>Delete Student</li>
-        </ul>
+                <div>
+                    <strong>Administrator</strong>
+                    <small>System Admin</small>
+                </div>
 
-    </article>
+            </div>
 
-    <article>
+        </section>
 
-        <h3>Faculty Management</h3>
 
-        <ul>
-            <li>Add Faculty</li>
-            <li>Assign Subjects</li>
-            <li>Update Faculty Details</li>
-        </ul>
+        <!-- ================= STATISTICS ================= -->
 
-    </article>
+        <section class="admin-stats" aria-label="Administration statistics">
 
-    <article>
 
-        <h3>Academic Management</h3>
+            <article class="admin-stat-card">
 
-        <ul>
-            <li>Upload Study Materials</li>
-            <li>Post Announcements</li>
-            <li>Manage Events</li>
-        </ul>
+                <span>👨‍🎓</span>
 
-    </article>
+                <div>
+                    <strong>1,250</strong>
+                    <p>Total Students</p>
+                </div>
 
-</section>
+            </article>
 
-<hr>
 
-<section>
+            <article class="admin-stat-card">
 
-    <h2>Portal Statistics</h2>
+                <span>👨‍🏫</span>
 
-    <table border="1" cellpadding="8">
+                <div>
+                    <strong>85</strong>
+                    <p>Faculty Members</p>
+                </div>
 
-        <tr>
-            <th>Category</th>
-            <th>Total</th>
-        </tr>
+            </article>
 
-        <tr>
-            <td>Students</td>
-            <td>1200</td>
-        </tr>
 
-        <tr>
-            <td>Faculty</td>
-            <td>75</td>
-        </tr>
+            <article class="admin-stat-card">
 
-        <tr>
-            <td>Departments</td>
-            <td>10</td>
-        </tr>
+                <span>📅</span>
 
-        <tr>
-            <td>Events</td>
-            <td>15</td>
-        </tr>
+                <div>
+                    <strong>18</strong>
+                    <p>Upcoming Events</p>
+                </div>
 
-    </table>
+            </article>
 
-</section>
 
-</main>
+            <article class="admin-stat-card">
 
-<footer>
+                <span>📢</span>
 
-<hr>
+                <div>
+                    <strong>12</strong>
+                    <p>Announcements</p>
+                </div>
 
-<p>&copy; 2026 StudentHub Admin Portal</p>
+            </article>
 
-</footer>
+        </section>
 
+
+        <!-- ================= MANAGEMENT ================= -->
+
+        <section class="admin-management">
+
+            <div class="admin-section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        MANAGEMENT
+                    </p>
+
+                    <h2>Administration Tools</h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-tools">
+
+
+                <article class="admin-tool-card">
+
+                    <span>👨‍🎓</span>
+
+                    <h3>Student Management</h3>
+
+                    <p>
+                        View and manage student information,
+                        profiles and academic records.
+                    </p>
+
+                    <a href="#">
+                        Manage Students →
+                    </a>
+
+                </article>
+
+
+                <article class="admin-tool-card">
+
+                    <span>👨‍🏫</span>
+
+                    <h3>Faculty Management</h3>
+
+                    <p>
+                        Manage faculty information and
+                        assigned academic responsibilities.
+                    </p>
+
+                    <a href="#">
+                        Manage Faculty →
+                    </a>
+
+                </article>
+
+
+                <article class="admin-tool-card">
+
+                    <span>📢</span>
+
+                    <h3>Announcements</h3>
+
+                    <p>
+                        Create, update and publish important
+                        announcements for students.
+                    </p>
+
+                    <a href="#">
+                        Manage Announcements →
+                    </a>
+
+                </article>
+
+
+                <article class="admin-tool-card">
+
+                    <span>📅</span>
+
+                    <h3>Event Management</h3>
+
+                    <p>
+                        Add and manage college events and
+                        student activities.
+                    </p>
+
+                    <a href="events.html">
+                        Manage Events →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT ACTIVITY ================= -->
+
+        <section class="admin-content-grid">
+
+
+            <!-- RECENT STUDENTS -->
+
+            <article class="admin-panel">
+
+                <div class="panel-heading">
+
+                    <h2>Recent Students</h2>
+
+                    <a href="#">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="student-list">
+
+
+                    <div class="student-row">
+
+                        <div class="student-avatar">
+                            AB
+                        </div>
+
+                        <div>
+                            <strong>Aarav Shah</strong>
+                            <span>IT • Semester 3</span>
+                        </div>
+
+                        <span class="status-active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="student-row">
+
+                        <div class="student-avatar">
+                            RP
+                        </div>
+
+                        <div>
+                            <strong>Riya Patel</strong>
+                            <span>Computer • Semester 4</span>
+                        </div>
+
+                        <span class="status-active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="student-row">
+
+                        <div class="student-avatar">
+                            VK
+                        </div>
+
+                        <div>
+                            <strong>Vivek Kumar</strong>
+                            <span>IT • Semester 2</span>
+                        </div>
+
+                        <span class="status-active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+            <!-- RECENT ANNOUNCEMENTS -->
+
+            <article class="admin-panel">
+
+                <div class="panel-heading">
+
+                    <h2>Recent Announcements</h2>
+
+                    <a href="#">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="announcement-list">
+
+
+                    <div class="announcement-item">
+
+                        <span>📢</span>
+
+                        <div>
+
+                            <strong>
+                                Semester Registration
+                            </strong>
+
+                            <p>
+                                Registration starts from
+                                22 July 2026.
+                            </p>
+
+                            <small>
+                                2 hours ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="announcement-item">
+
+                        <span>📚</span>
+
+                        <div>
+
+                            <strong>
+                                Assignment Submission
+                            </strong>
+
+                            <p>
+                                Students should submit assignments
+                                before the deadline.
+                            </p>
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="announcement-item">
+
+                        <span>🎓</span>
+
+                        <div>
+
+                            <strong>
+                                Orientation Program
+                            </strong>
+
+                            <p>
+                                New student orientation will be
+                                conducted next week.
+                            </p>
+
+                            <small>
+                                3 days ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="admin-quick-actions">
+
+            <p class="section-label">
+                QUICK ACTIONS
+            </p>
+
+            <h2>Common Tasks</h2>
+
+
+            <div class="quick-action-grid">
+
+
+                <a href="#">
+
+                    <span>➕</span>
+
+                    <strong>Add Student</strong>
+
+                    <small>
+                        Register a new student
+                    </small>
+
+                </a>
+
+
+                <a href="#">
+
+                    <span>📢</span>
+
+                    <strong>New Announcement</strong>
+
+                    <small>
+                        Publish an announcement
+                    </small>
+
+                </a>
+
+
+                <a href="events.html">
+
+                    <span>📅</span>
+
+                    <strong>Add Event</strong>
+
+                    <small>
+                        Create a college event
+                    </small>
+
+                </a>
+
+
+                <a href="#">
+
+                    <span>📊</span>
+
+                    <strong>View Reports</strong>
+
+                    <small>
+                        Check system reports
+                    </small>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <h3>StudentHub</h3>
+
+            <p>
+                Your digital connection to college life,
+                academics and student services.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Administration</h3>
+
+            <p>admin@studenthub.com</p>
+
+            <p>+91 98765 43210</p>
+
+            <p>Surat, Gujarat</p>
+
+        </div>
+
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 StudentHub. All Rights Reserved.
+        </p>
+
+    </footer>
+<script src="../js/script.js"></script>
 </body>
+
 </html>

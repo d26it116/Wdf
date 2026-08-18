@@ -2,163 +2,502 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile</title>
+
+    <title>StudentHub | Profile</title>
+
+    <link rel="icon" type="image/png" href="../images/Logo.jpg">
+
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
 
-<header>
+    <!-- ================= HEADER ================= -->
 
-    <h1>Student Profile</h1>
+    <header>
 
-    <nav>
+        <div class="logo">
 
-        <a href="index.html">Home</a> |
+            <img src="../images/Logo.jpg" alt="StudentHub Logo">
 
-<a href="about.html">About</a> |
+            <div>
+                <h1>StudentHub</h1>
+                <p>Student Information Portal</p>
+            </div>
 
-<a href="dashboard.html">Dashboard</a> |
+        </div>
 
-<a href="contact.html">Contact</a>|
+       <button id="menuBtn" class="menu-btn" type="button">
+    ☰
+</button>
 
-<a href="events.html">Event</a> |
-
-<a href="profile.html">Profile</a> |
-
-<a href="faq.html">Faq</a> |
-
-<a href="admin.html">Admin</a> |
-
-<a href="feedback.html">Feedback</a> |
-
-<a href="#">Logout</a> |
-    </nav>
-
-</header>
-
-<main>
-
-<section>
-
-    <h2>Personal Information</h2>
-
-    <table border="1" cellpadding="8">
-
-        <tr>
-            <th>Name</th>
-            <td>Aaryan Bhandari</td>
-        </tr>
-
-        <tr>
-            <th>Enrollment Number</th>
-            <td>D26IT116</td>
-        </tr>
-
-        <tr>
-            <th>Email</th>
-            <td>aaryan@email.com</td>
-        </tr>
-
-        <tr>
-            <th>Mobile</th>
-            <td>9510833566</td>
-        </tr>
-
-        <tr>
-            <th>Department</th>
-            <td>Information Technology</td>
-        </tr>
-
-        <tr>
-            <th>Semester</th>
-            <td>3</td>
-        </tr>
-
-    </table>
-
-</section>
-
-<hr>
-
-<section>
-
-    <h2>Academic Information</h2>
-
+<nav id="mainNav">
     <ul>
-
-        <li>DIPLOMA CGPA : 8.99</li>
-
-        <li>Attendance : 90%</li>
-
-        <li>Completed Assignments : 18</li>
-
-        <li>Pending Assignments : 2</li>
-
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="profile.html" aria-current="page">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="admin.html">Admin</a></li>
     </ul>
+</nav>
+    </header>
 
-</section>
 
-<hr>
+    <!-- ================= MAIN ================= -->
 
-<section>
+    <main class="profile-page">
 
-    <h2>Skills</h2>
 
-    <ul>
+        <!-- ================= PROFILE HEADER ================= -->
 
-        <li>HTML5</li>
+        <section class="profile-header">
 
-        <li>CSS3</li>
+            <div class="profile-picture">
 
-        <li>Java</li>
+                <img
+                    src="C:\Users\Aryan\Documents\Charusat\Sem-3\Wdf\StudentHub\images\Profile.jpg"
+                    alt="Student profile picture"
+                >
 
-        <li>JavaScript</li>
+            </div>
 
-        <li>Computer Networks</li>
+            <div class="profile-heading">
 
-    </ul>
+                <p class="section-label">
+                    STUDENT PROFILE
+                </p>
 
-</section>
+                <h2>Aaryan Bhandari</h2>
 
-<hr>
+                <p>
+                    Information Technology Student
+                </p>
 
-<section>
+                <span class="student-status">
+                    ● Active Student
+                </span>
 
-    <h2>Update Profile</h2>
+            </div>
 
-    <form>
+            <div class="profile-action">
 
-        <label for="phone">Mobile Number</label>
+                <a href="#">
+                    <button>Edit Profile</button>
+                </a>
 
-        <br>
+            </div>
 
-        <input type="tel" id="phone" placeholder="Enter Mobile Number">
+        </section>
 
-        <br><br>
 
-        <label for="address">Address</label>
+        <!-- ================= PROFILE CONTENT ================= -->
 
-        <br>
+        <section class="profile-content">
 
-        <textarea id="address" rows="4" cols="35"></textarea>
 
-        <br><br>
+            <!-- PERSONAL INFORMATION -->
 
-        <button type="submit">Update Profile</button>
+            <article class="profile-card">
 
-    </form>
+                <div class="profile-card-heading">
 
-</section>
+                    <h2>Personal Information</h2>
 
-</main>
+                    <span>👤</span>
 
-<footer>
+                </div>
 
-    <p>&copy; 2026 StudentHub</p>
 
-</footer>
+                <div class="profile-details">
 
+                    <div class="detail-item">
+
+                        <span>Name</span>
+
+                        <strong>Aaryan Bhandari</strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Student ID</span>
+
+                        <strong>STU2026001</strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Email</span>
+
+                        <strong>
+                            aaryan@studenthub.com
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Phone</span>
+
+                        <strong>
+                            +91 98765 43210
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Date of Birth</span>
+
+                        <strong>
+                            15 January 2005
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>City</span>
+
+                        <strong>
+                            Surat, Gujarat
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ACADEMIC INFORMATION -->
+
+            <article class="profile-card">
+
+                <div class="profile-card-heading">
+
+                    <h2>Academic Information</h2>
+
+                    <span>🎓</span>
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <div class="detail-item">
+
+                        <span>Program</span>
+
+                        <strong>
+                            Bachelor of Engineering
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Department</span>
+
+                        <strong>
+                            Information Technology
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Semester</span>
+
+                        <strong>
+                            Semester 3
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Division</span>
+
+                        <strong>
+                            A
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Academic Year</span>
+
+                        <strong>
+                            2026 - 2027
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Enrollment Status</span>
+
+                        <strong class="active-text">
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= ACADEMIC SUMMARY ================= -->
+
+            <article class="profile-card academic-summary">
+
+                <div class="profile-card-heading">
+
+                    <h2>Academic Summary</h2>
+
+                    <span>📊</span>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+
+                    <div class="summary-item">
+
+                        <strong>87%</strong>
+
+                        <span>Attendance</span>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <strong>8.4</strong>
+
+                        <span>Current CGPA</span>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <strong>4</strong>
+
+                        <span>Pending Assignments</span>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <strong>12</strong>
+
+                        <span>Completed Courses</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= CONTACT INFORMATION ================= -->
+
+            <article class="profile-card">
+
+                <div class="profile-card-heading">
+
+                    <h2>Contact Information</h2>
+
+                    <span>📞</span>
+
+                </div>
+
+
+                <div class="contact-details">
+
+                    <p>
+                        <strong>College Email:</strong>
+                        aaryan@studenthub.com
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        +91 98765 43210
+                    </p>
+
+                    <p>
+                        <strong>College:</strong>
+                        StudentHub College
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong>
+                        Surat, Gujarat, India
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="profile-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="profile-action-grid">
+
+                <a href="dashboard.html">
+
+                    <span>📊</span>
+
+                    <strong>Dashboard</strong>
+
+                    <small>
+                        View academic activity
+                    </small>
+
+                </a>
+
+
+                <a href="events.html">
+
+                    <span>📅</span>
+
+                    <strong>College Events</strong>
+
+                    <small>
+                        Explore upcoming events
+                    </small>
+
+                </a>
+
+
+                <a href="feedback.html">
+
+                    <span>💬</span>
+
+                    <strong>Give Feedback</strong>
+
+                    <small>
+                        Share your experience
+                    </small>
+
+                </a>
+
+
+                <a href="contact.html">
+
+                    <span>📞</span>
+
+                    <strong>Contact College</strong>
+
+                    <small>
+                        Get help and support
+                    </small>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <h3>StudentHub</h3>
+
+            <p>
+                Your digital connection to college life,
+                academics and student services.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>Surat, Gujarat</p>
+
+            <p>info@studenthub.com</p>
+
+            <p>+91 98765 43210</p>
+
+        </div>
+
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 StudentHub. All Rights Reserved.
+        </p>
+
+    </footer>
+<script src="../js/script.js"></script>
 </body>
+
 </html>

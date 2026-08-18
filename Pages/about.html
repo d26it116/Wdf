@@ -3,105 +3,355 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | About Us</title>
+    <link rel="icon" type="image/png" href="../images/Logo.jpg">
 
-<title>About StudentHub</title>
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
 
-<header>
+    <!-- Header -->
 
-<h1>About StudentHub</h1>
+    <header>
 
-<nav>
+        <div class="logo">
 
-<a href="index.html">Home</a> |
+            <img src="../images/Logo.jpg" alt="StudentHub Logo">
 
-<a href="about.html">About</a> |
+            <div>
+                <h1>StudentHub</h1>
+                <p>College Student Portal</p>
+            </div>
 
-<a href="dashboard.html">Dashboard</a> |
+        </div>
 
-<a href="contact.html">Contact</a>|
+         <button id="menuBtn" class="menu-btn" type="button">
+    ☰
+</button>
 
-<a href="events.html">Event</a> |
-
-<a href="profile.html">Profile</a> |
-
-<a href="faq.html">Faq</a> |
-
-<a href="admin.html">Admin</a> |
-
-<a href="feedback.html">Feedback</a> |
-
-<a href="#">Logout</a> |
-
-
-
+<nav id="mainNav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="admin.html">Admin</a></li>
+    </ul>
 </nav>
+    </header>
 
-</header>
 
-<main>
+    <main id="main-content">
+<section class="about-intro">
 
-<section>
+    <div class="about-intro-content">
 
-<h2>Who We Are</h2>
+        <span class="section-label">WHO WE ARE</span>
 
-<p>
+        <h2>About StudentHub</h2>
 
-StudentHub is an online academic management portal developed for students
-and faculty to access important academic information from one place.
+        <p>
+            StudentHub is a centralized college portal designed to
+            provide students with easy access to academic information
+            and campus services.
+        </p>
 
-</p>
+        <p>
+            The platform brings important student activities together in
+            one place, making communication between students, faculty
+            and administration easier and more efficient.
+        </p>
 
-</section>
+        <a href="#" class="about-btn">
+            Explore StudentHub
+        </a>
 
-<section>
+    </div>
 
-<h2>Objectives</h2>
+    <div class="about-image-section">
 
-<ul>
+    <div class="about-intro-image">
+        <img id="aboutImage"
+             src="../images/Campus1.webp"
+             alt="StudentHub College">
+    </div>
 
-<li>Manage student records.</li>
+    <div class="image-buttons">
 
-<li>Share announcements.</li>
+        <button type="button" onclick="previousImage()">
+            ← Previous
+        </button>
 
-<li>Upload assignments.</li>
+        <button type="button" onclick="nextImage()">
+            Next →
+        </button>
 
-<li>Provide study materials.</li>
+    </div>
 
-<li>Track attendance.</li>
 
-<li>Improve communication.</li>
 
-</ul>
+</section>  
 
-</section>
 
-<section>
+        <!-- Vision and Mission -->
 
-<h2>Our Vision</h2>
+        <section>
 
-<p>
+            <h2>Our Vision & Mission</h2>
 
-To build a smart, secure and user-friendly academic platform.
+            <div class="about-grid">
 
-</p>
+                <article class="card">
 
-</section>
+                    <h3>🎯 Our Vision</h3>
 
-</main>
+                    <p>
+                        To create a connected and technology-driven
+                        academic environment where students can learn,
+                        communicate and grow.
+                    </p>
 
-<footer>
+                </article>
 
-<p>StudentHub © 2026</p>
 
-</footer>
+                <article class="card">
 
+                    <h3>🚀 Our Mission</h3>
+
+                    <p>
+                        To provide students with a simple, secure and
+                        accessible digital platform for managing their
+                        academic and campus activities.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Principal Message -->
+
+        <section class="principal">
+
+            <h2>Principal's Message</h2>
+
+            <article class="card">
+
+                <h3>Message to Students</h3>
+
+                <p>
+                    Education is not only about academic knowledge but
+                    also about developing creativity, confidence and
+                    responsibility. StudentHub supports this journey by
+                    keeping students connected with their college and
+                    academic community.
+                </p>
+
+                <p>
+                    We encourage every student to make the best use of
+                    available learning opportunities and actively
+                    participate in campus activities.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- Campus Facilities -->
+
+        <section>
+
+            <h2>Campus Facilities</h2>
+
+            <div class="about-grid">
+
+                <article class="card">
+
+                    <h3>📚 Digital Library</h3>
+
+                    <p>
+                        Access books, notes, journals and digital
+                        learning resources.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>💻 Computer Labs</h3>
+
+                    <p>
+                        Modern computer laboratories for practical
+                        learning and technical development.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🏟️ Sports Facilities</h3>
+
+                    <p>
+                        Facilities for indoor and outdoor activities
+                        that encourage student participation.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🔬 Laboratories</h3>
+
+                    <p>
+                        Well-equipped laboratories for practical and
+                        project-based learning.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Departments -->
+
+        <section>
+
+            <h2>Academic Departments</h2>
+
+            <div class="about-grid">
+
+                <article class="card">
+
+                    <h3>Computer Engineering</h3>
+
+                    <p>
+                        Software development, programming and computer
+                        technologies.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Information Technology</h3>
+
+                    <p>
+                        Web development, databases, networking and
+                        information systems.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Artificial Intelligence</h3>
+
+                    <p>
+                        Machine learning, data science and intelligent
+                        computing technologies.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Call to Action -->
+
+        <section class="cta">
+
+            <h2>Explore StudentHub</h2>
+
+            <p>
+                Discover academic services, events and student
+                resources available through the portal.
+            </p>
+
+            <a href="dashboard.html">
+                <button>Visit Dashboard</button>
+            </a>
+
+            <a href="contact.html">
+                <button>Contact Us</button>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <section>
+
+            <h3>StudentHub</h3>
+
+            <p>
+                A centralized digital platform for students,
+                faculty and college administration.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </section>
+
+
+        <section>
+
+            <h3>Contact</h3>
+
+            <p>Email: info@studenthub.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Surat, Gujarat</p>
+
+        </section>
+
+
+        <hr>
+
+        <p>
+            © 2026 StudentHub. All Rights Reserved.
+        </p>
+
+    </footer>
+<script src="../js/script.js"></script>
 </body>
 
 </html>
