@@ -1,0 +1,38 @@
+[
+    {
+        "name": "CodeCraft Hackathon",
+        "category": "Technical",
+        "date": "25 September 2026",
+        "location": "Computer Lab"
+    },
+    {
+        "name": "Web Development Workshop",
+        "category": "Workshop",
+        "date": "28 September 2026",
+        "location": "Seminar Hall"
+    },
+    {
+        "name": "Inter College Tournament",
+        "category": "Sports",
+        "date": "30 September 2026",
+        "location": "College Ground"
+    },
+    {
+        "name": "Campus Fest",
+        "category": "Cultural",
+        "date": "5 October 2026",
+        "location": "Main Auditorium"
+    },
+    {
+        "name": "Career Guidance Seminar",
+        "category": "Career",
+        "date": "10 October 2026",
+        "location": "Seminar Hall"
+    },
+    {
+        "name": "Student Innovation Day",
+        "category": "Technical",
+        "date": "15 October 2026",
+        "location": "Innovation Center"
+    }
+]   
