@@ -8,7 +8,11 @@
     {
         "name": "Web Development Workshop",
         "category": "Workshop",
+<<<<<<< HEAD
         "date": "30 September 2026",
+=======
+        "date": "28 September 2026",
+>>>>>>> 4eab165 (Updated project)
         "location": "Seminar Hall"
     },
     {

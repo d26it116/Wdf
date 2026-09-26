@@ -1,0 +1,108 @@
+
+[
+    {
+        "id": 1,
+        "name": "Aarav Patel",
+        "email": "aarav.patel@example.com",
+        "course": "B.Tech IT",
+        "year": 3
+    },
+    {
+        "id": 2,
+        "name": "Diya Shah",
+        "email": "diya.shah@example.com",
+        "course": "B.Tech CSE",
+        "year": 2
+    },
+    {
+        "id": 3,
+        "name": "Rohan Mehta",
+        "email": "rohan.mehta@example.com",
+        "course": "B.Tech IT",
+        "year": 3
+    },
+    {
+        "id": 4,
+        "name": "Ananya Desai",
+        "email": "ananya.desai@example.com",
+        "course": "B.Tech CSE",
+        "year": 1
+    },
+    {
+        "id": 5,
+        "name": "Vivaan Joshi",
+        "email": "vivaan.joshi@example.com",
+        "course": "B.Tech IT",
+        "year": 4
+    },
+    {
+        "id": 6,
+        "name": "Isha Mehta",
+        "email": "isha.mehta@example.com",
+        "course": "BCA",
+        "year": 2
+    },
+    {
+        "id": 7,
+        "name": "Arjun Patel",
+        "email": "arjun.patel@example.com",
+        "course": "B.Tech CSE",
+        "year": 3
+    },
+    {
+        "id": 8,
+        "name": "Kavya Shah",
+        "email": "kavya.shah@example.com",
+        "course": "BCA",
+        "year": 1
+    },
+    {
+        "id": 9,
+        "name": "Aditya Desai",
+        "email": "aditya.desai@example.com",
+        "course": "B.Tech IT",
+        "year": 4
+    },
+    {
+        "id": 10,
+        "name": "Meera Joshi",
+        "email": "meera.joshi@example.com",
+        "course": "B.Tech CSE",
+        "year": 2
+    },
+    {
+        "id": 11,
+        "name": "Harsh Patel",
+        "email": "harsh.patel@example.com",
+        "course": "BCA",
+        "year": 3
+    },
+    {
+        "id": 12,
+        "name": "Nisha Shah",
+        "email": "nisha.shah@example.com",
+        "course": "B.Tech IT",
+        "year": 1
+    },
+    {
+        "id": 13,
+        "name": "Yash Mehta",
+        "email": "yash.mehta@example.com",
+        "course": "B.Tech CSE",
+        "year": 4
+    },
+    {
+        "id": 14,
+        "name": "Pooja Desai",
+        "email": "pooja.desai@example.com",
+        "course": "BCA",
+        "year": 2
+    },
+    {
+        "id": 15,
+        "name": "Krish Joshi",
+        "email": "krish.joshi@example.com",
+        "course": "B.Tech IT",
+        "year": 3
+    }
+]

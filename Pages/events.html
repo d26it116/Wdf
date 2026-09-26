@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +9,12 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/png" href="../images/Logo.jpg">
+    <link rel="icon"
+          type="image/png"
+          href="../images/Logo.jpg">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+          href="../css/style.css">
 
     <title>StudentHub | Events</title>
 
@@ -44,23 +48,83 @@
     </div>
 
 
-     <button id="menuBtn" class="menu-btn" type="button">
-    ☰
-</button>
+    <!-- Mobile Menu Button -->
 
-<nav id="mainNav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="events.html" aria-current="page">Events</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li><a href="admin.html">Admin</a></li>
-    </ul>
-</nav>
+    <button id="menuBtn"
+            class="menu-btn"
+            type="button">
+
+        ☰
+
+    </button>
+
+
+    <!-- Navigation -->
+
+    <nav id="mainNav">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="events.html"
+                   aria-current="page">
+
+                    Events
+
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+            <li>
+                <a href="faq.html">
+                    FAQ
+                </a>
+            </li>
+
+            <li>
+                <a href="feedback.html">
+                    Feedback
+                </a>
+            </li>
+
+            <li>
+                <a href="admin.html">
+                    Admin
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 </header>
 
@@ -71,7 +135,7 @@
 <main>
 
 
-    <!-- Page Introduction -->
+    <!-- ================= PAGE INTRODUCTION ================= -->
 
     <section>
 
@@ -93,7 +157,7 @@
 
 
 
-    <!-- Event Categories -->
+    <!-- ================= EVENT CATEGORIES ================= -->
 
     <section>
 
@@ -110,6 +174,8 @@
 
         <div class="event-container">
 
+
+            <!-- Technical -->
 
             <article class="event-card">
 
@@ -130,6 +196,8 @@
 
 
 
+            <!-- Cultural -->
+
             <article class="event-card">
 
                 <span>
@@ -149,6 +217,8 @@
 
 
 
+            <!-- Sports -->
+
             <article class="event-card">
 
                 <span>
@@ -167,6 +237,8 @@
             </article>
 
 
+
+            <!-- Seminars -->
 
             <article class="event-card">
 
@@ -192,9 +264,9 @@
 
 
 
-    <!-- Upcoming Events -->
+    <!-- ================= DYNAMIC EVENTS ================= -->
 
-    <section>
+    <section class="events-section">
 
         <p class="section-label">
             DON'T MISS OUT
@@ -205,203 +277,119 @@
         </h2>
 
         <p>
-            Join the activities and make your college
-            experience more memorable.
+            Search, filter and explore upcoming
+            college activities.
         </p>
 
         <br>
 
 
-        <div class="event-container">
+        <!-- ================= SEARCH ================= -->
 
+        <input type="text"
+               id="searchEvent"
+               placeholder="Search event...">
 
-            <!-- Event 1 -->
 
-            <article class="event-card">
 
-                <p class="section-label">
-                    TECHNICAL
-                </p>
+        <!-- ================= CATEGORY ================= -->
 
-                <h3>
-                    CodeCraft Hackathon
-                </h3>
+        <select id="category">
 
-                <strong>
-                    18 AUG 2026
-                </strong>
+            <option value="all">
+                All Categories
+            </option>
 
-                <p>
-                    A 24-hour coding challenge where
-                    students solve real-world problems
-                    using technology.
-                </p>
+            <option value="Technical">
+                Technical
+            </option>
 
-                <br>
+            <option value="Workshop">
+                Workshop
+            </option>
 
-                <button type="button">
-                    View Event
-                </button>
+            <option value="Sports">
+                Sports
+            </option>
 
-            </article>
+            <option value="Cultural">
+                Cultural
+            </option>
 
+            <option value="Career">
+                Career
+            </option>
 
+        </select>
 
-            <!-- Event 2 -->
 
-            <article class="event-card">
 
-                <p class="section-label">
-                    CULTURAL
-                </p>
+        <!-- ================= SORT ================= -->
 
-                <h3>
-                    Campus Fest
-                </h3>
+        <select id="sort">
 
-                <strong>
-                    25 AUG 2026
-                </strong>
+            <option value="default">
+                Default Order
+            </option>
 
-                <p>
-                    Enjoy music, performances,
-                    competitions and student activities.
-                </p>
+            <option value="az">
+                A - Z
+            </option>
 
-                <br>
+            <option value="za">
+                Z - A
+            </option>
 
-                <button type="button">
-                    View Event
-                </button>
+        </select>
 
-            </article>
 
 
+        <!-- ================= LOADING ================= -->
 
-            <!-- Event 3 -->
+        <p id="loading">
+            Loading events...
+        </p>
 
-            <article class="event-card">
 
-                <p class="section-label">
-                    SPORTS
-                </p>
 
-                <h3>
-                    Inter College Tournament
-                </h3>
+        <!-- ================= EVENT CONTAINER ================= -->
 
-                <strong>
-                    30 AUG 2026
-                </strong>
+        <div id="eventContainer">
 
-                <p>
-                    Participate in exciting sports
-                    competitions across the campus.
-                </p>
-
-                <br>
-
-                <button type="button">
-                    View Event
-                </button>
-
-            </article>
-
-
-
-            <!-- Event 4 -->
-
-            <article class="event-card">
-
-                <p class="section-label">
-                    SEMINAR
-                </p>
-
-                <h3>
-                    Industry Expert Talk
-                </h3>
-
-                <strong>
-                    05 SEP 2026
-                </strong>
-
-                <p>
-                    Learn about current industry trends
-                    from experienced professionals.
-                </p>
-
-                <br>
-
-                <button type="button">
-                    View Event
-                </button>
-
-            </article>
-
-
-
-            <!-- Event 5 -->
-
-            <article class="event-card">
-
-                <p class="section-label">
-                    WORKSHOP
-                </p>
-
-                <h3>
-                    Web Development Workshop
-                </h3>
-
-                <strong>
-                    10 SEP 2026
-                </strong>
-
-                <p>
-                    Learn modern web development concepts
-                    and build your first responsive website.
-                </p>
-
-                <br>
-
-                <button type="button">
-                    View Event
-                </button>
-
-            </article>
-
-
-
-            <!-- Event 6 -->
-
-            <article class="event-card">
-
-                <p class="section-label">
-                    STUDENT ACTIVITY
-                </p>
-
-                <h3>
-                    Student Innovation Day
-                </h3>
-
-                <strong>
-                    15 SEP 2026
-                </strong>
-
-                <p>
-                    Present innovative ideas and projects
-                    with other students.
-                </p>
-
-                <br>
-
-                <button type="button">
-                    View Event
-                </button>
-
-            </article>
-
+            <!-- JavaScript will add events here -->
 
         </div>
+
+
+
+        <!-- ================= PAGINATION ================= -->
+
+        <div class="pagination">
+
+            <button id="prev"
+                    type="button">
+
+                Previous
+
+            </button>
+
+
+            <span id="page">
+
+                Page 1
+
+            </span>
+
+
+            <button id="next"
+                    type="button">
+
+                Next
+
+            </button>
+
+        </div>
+
 
     </section>
 
@@ -413,6 +401,9 @@
 <!-- ================= FOOTER ================= -->
 
 <footer>
+
+
+    <!-- Footer About -->
 
     <div>
 
@@ -427,6 +418,9 @@
 
     </div>
 
+
+
+    <!-- Quick Links -->
 
     <div>
 
@@ -465,6 +459,9 @@
     </div>
 
 
+
+    <!-- Student Services -->
+
     <div>
 
         <h3>
@@ -502,15 +499,32 @@
     </div>
 
 
+
     <hr>
 
 
+
+    <!-- Copyright -->
+
     <p class="copyright">
-        &copy; 2026 StudentHub. All Rights Reserved.
+
+        &copy; 2026 StudentHub.
+        All Rights Reserved.
+
     </p>
+
 
 </footer>
 
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script src="../js/script.js"></script>
+
+
 </body>
+
 </html>
+```
+

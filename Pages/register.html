@@ -1,116 +1,281 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>Student Registration</title>
- <link rel="icon" type="image/png" href="../images/Logo.jpg">
- 
+    <link rel="stylesheet" href="../css/style.css">
 
+    <title>Student Registration</title>
 
 </head>
 
-<body class="auth-page"><header>
 
-<h1>Student Registration</h1>
+<body class="auth-page">
 
-</header>
 
-<main>
+    <header>
 
-<form>
+        <h1>Student Registration</h1>
 
-<fieldset>
+    </header>
 
-<legend>Registration Form</legend>
 
-<label for="name">Full Name</label>
+    <main>
 
-<br>
+        <form
+            id="registerForm"
+            action="Register.php"
+            method="POST"
+        >
 
-<input type="text" id="name" placeholder="Enter your name">
+            <fieldset>
 
-<br><br>
+                <legend>Registration Form</legend>
 
-<label for="email">Email</label>
 
-<br>
+                <!-- Name -->
 
-<input type="email" id="email" placeholder="Enter email">
+                <label for="name">
+                    Full Name
+                </label>
 
-<br><br>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                >
 
-<label for="password">Password</label>
+                <div class="error" id="nameError"></div>
 
-<br>
 
-<input type="password" id="password">
+                <!-- Email -->
 
-<br><br>
+                <label for="email">
+                    Email
+                </label>
 
-<label for="course">Course</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email"
+                >
 
-<br>
+                <div class="error" id="emailError"></div>
 
-<select id="course">
 
-<option>Information Technology</option>
+                <!-- Mobile -->
 
-<option>Computer Engineering</option>
+                <label for="mobile">
+                    Mobile Number
+                </label>
 
-<option>Artificial Intelligence</option>
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    placeholder="Enter mobile number"
+                >
 
-</select>
+                <div class="error" id="mobileError"></div>
 
-<br><br>
 
-<label>Gender</label>
+                <!-- Password -->
 
-<br>
+                <label for="password">
+                    Password
+                </label>
 
-<input type="radio" name="gender"> Male
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password"
+                >
 
-<input type="radio" name="gender"> Female
+                <div class="error" id="passwordError"></div>
 
-<br><br>
 
-<input type="checkbox">
+                <!-- Confirm Password -->
 
-I agree to the terms and conditions.
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
 
-<br><br>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm password"
+                >
 
-<button type="submit">
+                <div class="error"
+                     id="confirmPasswordError">
+                </div>
 
-Register
 
-</button>
+                <!-- Course -->
 
-</fieldset>
+                <label for="course">
+                    Course
+                </label>
 
-</form>
+                <select
+                    id="course"
+                    name="course"
+                >
 
-</main>
+                    <option value="">
+                        Select Course
+                    </option>
 
-<footer>
+                    <option value="IT">
+                        Information Technology
+                    </option>
 
-<p>Already have an account?
+                    <option value="CE">
+                        Computer Engineering
+                    </option>
 
-<a href="login.html">
+                    <option value="AI">
+                        Artificial Intelligence
+                    </option>
 
-Login
+                </select>
 
-</a>
+                <div class="error"
+                     id="courseError">
+                </div>
 
-</p>
 
-</footer>
+                <!-- Year -->
+
+                <label for="year">
+                    Year
+                </label>
+
+                <input
+                    type="number"
+                    id="year"
+                    name="year"
+                    min="1"
+                    max="4"
+                    placeholder="Enter year"
+                >
+
+                <div class="error"
+                     id="yearError">
+                </div>
+
+
+                <!-- Gender -->
+
+                <label>
+                    Gender
+                </label>
+
+
+                <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                >
+
+                Male
+
+
+                <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                >
+
+                Female
+
+
+                <input
+                    type="radio"
+                    name="gender"
+                    value="Other"
+                >
+
+                Other
+
+
+                <div class="error"
+                     id="genderError">
+                </div>
+
+
+                <!-- Terms -->
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    value="accepted"
+                >
+
+                <label for="terms">
+                    I agree to the terms and conditions.
+                </label>
+
+                <div class="error"
+                     id="termsError">
+                </div>
+
+
+                <!-- Success -->
+
+                <div
+                    class="success"
+                    id="successMessage">
+                </div>
+
+
+                <!-- Buttons -->
+
+                <button type="submit">
+                    Register
+                </button>
+
+                <button type="reset">
+                    Clear
+                </button>
+
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
 
 </body>
 
 </html>
+

@@ -1,0 +1,51 @@
+[
+    {
+        "question": "How can I register as a student?",
+        "answer": "Open the registration page and fill in all required details."
+    },
+    {
+        "question": "How can I reset my password?",
+        "answer": "Go to the login page and select the reset password option."
+    },
+    {
+        "question": "How can I view college events?",
+        "answer": "Open the Events page from the navigation menu."
+    },
+    {
+        "question": "How can I contact the college?",
+        "answer": "Open the Contact page and submit the contact form."
+    },
+    {
+        "question": "Where can I see student information?",
+        "answer": "Student information is available on the Students page."
+    },
+    {
+        "question": "Can I register for college events?",
+        "answer": "Yes, students can register for available college events."
+    }
+    
+    {
+        "question": "How can I register as a student?",
+        "answer": "Open the registration page and fill in all required details."
+    },
+    {
+        "question": "How can I reset my password?",
+        "answer": "Go to the login page and select the reset password option."
+    },
+    {
+        "question": "How can I view college events?",
+        "answer": "Open the Events page from the navigation menu."
+    },
+    {
+        "question": "How can I contact the college?",
+        "answer": "Open the Contact page and submit the contact form."
+    },
+    {
+        "question": "Where can I see student information?",
+        "answer": "Student information is available on the Students page."
+    },
+    {
+        "question": "Can I register for college events?",
+        "answer": "Yes, students can register for available college events."
+    }
+]

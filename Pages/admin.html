@@ -9,7 +9,7 @@
 
     <title>StudentHub | Admin</title>
 
-        <link rel="icon" type="image/png" href="../images/Logo.jpg">
+    <link rel="icon" type="image/png" href="../images/Logo.jpg">
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -32,23 +32,23 @@
         </div>
 
 
-         <button id="menuBtn" class="menu-btn" type="button">
-    ☰
-</button>
+        <button id="menuBtn" class="menu-btn" type="button">
+            ☰
+        </button>
 
-<nav id="mainNav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li><a href="admin.html" aria-current="page">Admin</a></li>
-    </ul>
-</nav>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html" aria-current="page">Admin</a></li>
+            </ul>
+        </nav>
 
     </header>
 
@@ -247,183 +247,27 @@
 
         <!-- ================= RECENT ACTIVITY ================= -->
 
-        <section class="admin-content-grid">
-
-
-            <!-- RECENT STUDENTS -->
-
-            <article class="admin-panel">
-
-                <div class="panel-heading">
-
-                    <h2>Recent Students</h2>
-
-                    <a href="#">
-                        View All
-                    </a>
-
-                </div>
-
-
-                <div class="student-list">
-
-
-                    <div class="student-row">
-
-                        <div class="student-avatar">
-                            AB
-                        </div>
-
-                        <div>
-                            <strong>Aarav Shah</strong>
-                            <span>IT • Semester 3</span>
-                        </div>
-
-                        <span class="status-active">
-                            Active
-                        </span>
-
-                    </div>
-
-
-                    <div class="student-row">
-
-                        <div class="student-avatar">
-                            RP
-                        </div>
-
-                        <div>
-                            <strong>Riya Patel</strong>
-                            <span>Computer • Semester 4</span>
-                        </div>
-
-                        <span class="status-active">
-                            Active
-                        </span>
-
-                    </div>
-
-
-                    <div class="student-row">
-
-                        <div class="student-avatar">
-                            VK
-                        </div>
-
-                        <div>
-                            <strong>Vivek Kumar</strong>
-                            <span>IT • Semester 2</span>
-                        </div>
-
-                        <span class="status-active">
-                            Active
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-            </article>
-
-
-            <!-- RECENT ANNOUNCEMENTS -->
-
-            <article class="admin-panel">
-
-                <div class="panel-heading">
-
-                    <h2>Recent Announcements</h2>
-
-                    <a href="#">
-                        View All
-                    </a>
-
-                </div>
-
-
-                <div class="announcement-list">
-
-
-                    <div class="announcement-item">
-
-                        <span>📢</span>
-
-                        <div>
-
-                            <strong>
-                                Semester Registration
-                            </strong>
-
-                            <p>
-                                Registration starts from
-                                22 July 2026.
-                            </p>
-
-                            <small>
-                                2 hours ago
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="announcement-item">
-
-                        <span>📚</span>
-
-                        <div>
-
-                            <strong>
-                                Assignment Submission
-                            </strong>
-
-                            <p>
-                                Students should submit assignments
-                                before the deadline.
-                            </p>
-
-                            <small>
-                                Yesterday
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="announcement-item">
-
-                        <span>🎓</span>
-
-                        <div>
-
-                            <strong>
-                                Orientation Program
-                            </strong>
-
-                            <p>
-                                New student orientation will be
-                                conducted next week.
-                            </p>
-
-                            <small>
-                                3 days ago
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </article>
-
+        <section class="page-intro">
+            <p class="section-label"> STUDENT DIRECTORY </p>
+            <h2>Students</h2>
+            <p> Search and explore student information, courses and academic years. </p>
+        </section> <!-- ================= STUDENTS ================= -->
+        <section class="events-section"> <!-- Search --> <input type="text" id="studentSearch"
+                placeholder="Search student"> <!-- Category --> <select id="studentCategory">
+                <option value="all"> All Categories </option>
+                <option value="B.Tech IT"> B.Tech IT </option>
+                <option value="B.Tech CSE"> B.Tech CSE </option>
+                <option value="BCA"> BCA </option>
+            </select> <!-- Sort --> <select id="studentSort">
+                <option value="default"> Default Order </option>
+                <option value="az"> A-Z </option>
+                <option value="za"> Z-A </option>
+            </select> <!-- Loading -->
+            <p id="studentLoading"> Loading students... </p> <!-- Student Cards -->
+            <div id="studentContainer"></div> <!-- Pagination -->
+            <div class="pagination"> <button id="studentPrev" type="button"> Previous </button> <span id="studentPage">
+                    Page 1 </span> <button id="studentNext" type="button"> Next </button> </div>
         </section>
-
-
         <!-- ================= QUICK ACTIONS ================= -->
 
         <section class="admin-quick-actions">
@@ -560,7 +404,7 @@
         </p>
 
     </footer>
-<script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
