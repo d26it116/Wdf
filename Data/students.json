@@ -1,15 +1,23 @@
 [
     {
-        "name": "aaryan bhandari",
-        "email": "aaryan@gmail.com",
+        "name": "Kushal",
+        "email": "kushal@gmail.com",
         "mobile": "1234567890",
         "course": "IT",
-        "year": "4",
+        "year": "2",
         "gender": "Male"
     },
     {
-        "name": "aaryan bhandari",
-        "email": "aaryanbhandari848@gmail.com",
+        "name": "ramesh",
+        "email": "ramesh@gmail.com",
+        "mobile": "1234567890",
+        "course": "IT",
+        "year": "1",
+        "gender": "Male"
+    },
+    {
+        "name": "Aaryan Bhandari",
+        "email": "Aaryan@gmail.com",
         "mobile": "1234567890",
         "course": "IT",
         "year": "4",
