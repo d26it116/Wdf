@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Users API Management (Fetch API)</title>
+    <link rel="icon" type="image/png" href="../images/Logo.jpg">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .container {
+            max-width: 1050px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+        .form-box, .table-box {
+            background: #fff;
+            padding: 22px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            margin-bottom: 25px;
+        }
+        .grid-form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .grid-form label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #334155;
+        }
+        .grid-form input, .grid-form select {
+            width: 100%;
+            padding: 9px 12px;
+            box-sizing: border-box;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        .btn-row {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .btn-submit { background: #174ea6; color: #fff; }
+        .btn-cancel { background: #64748b; color: #fff; display: none; }
+        .btn-edit { background: #f59e0b; color: #fff; padding: 6px 12px; font-size: 0.85rem; border-radius: 4px; border: 0; cursor: pointer; }
+        .btn-del { background: #ef4444; color: #fff; padding: 6px 12px; font-size: 0.85rem; border-radius: 4px; border: 0; cursor: pointer; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
+        .badge-student { background: #e0f2fe; color: #0369a1; }
+        .badge-admin { background: #fef3c7; color: #b45309; }
+        .alert-box {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: none;
+            font-weight: 500;
+        }
+        .alert-success { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .alert-error { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        th { background: #edf3fc; color: #174ea6; font-weight: 600; }
+        tr:hover td { background: #f8fbff; }
+        @media(max-width: 768px) {
+            .grid-form { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../images/Logo.jpg" alt="StudentHub Logo">
+            <div>
+                <h1>StudentHub Admin</h1>
+                <p>Asynchronous User Table Management (Fetch API & JSON)</p>
+            </div>
+        </div>
+         <nav id="mainNav">
+            <ul>
+               
+               <li><a href="../Pages/admin.php">Admin Home</a></li>
+                 <li><a href="../php/event_management.php" style="font-weight: 600; color: #174ea6;">Manage Events</a></li>
+                <li><a href="../php/student_management.php" style="font-weight: 600; color: #174ea6;">Manage Students</a></li>
+                <li><a href="student_crud_fetch.html" class="active" style="border-bottom: 2px solid #fff; font-weight: bold;">Async CRUD</a></li>
+                <li><a href="../php/logout.php" style="color: #ff4444; font-weight: bold;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Status Alert Box -->
+        <div id="alertBox" class="alert-box"></div>
+
+        <!-- Add / Edit User Form -->
+        <div class="form-box">
+            <h2 id="formTitle">Add New System User</h2>
+            <form id="userCrudForm">
+                <input type="hidden" id="user_id" value="">
+                
+                <div class="grid-form">
+                    <div>
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required placeholder="e.g. Aaryan Bhandari">
+                    </div>
+                    <div>
+                        <label for="username">Username *</label>
+                        <input type="text" id="username" required placeholder="e.g. aaryan_bhandari">
+                    </div>
+                    <div>
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required placeholder="e.g. diya@example.com">
+                    </div>
+                    <div>
+                        <label for="role">User Role *</label>
+                        <select id="role" required>
+                            <option value="student">Student</option>
+                            <option value="admin">Administrator</option>
+                        </select>
+                    </div>
+                    <div id="passwordGroup">
+                        <label for="password" id="passwordLabel">Password (min 6 characters) *</label>
+                        <input type="password" id="password" placeholder="Enter password">
+                    </div>
+
+                    <div class="btn-row">
+                        <button type="submit" id="submitBtn" class="btn btn-submit">Save User</button>
+                        <button type="button" id="cancelBtn" class="btn btn-cancel">Cancel Edit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Live Users Table -->
+        <div class="table-box">
+            <h2>Registered Users List (`users` Table)</h2>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Created At</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <tr><td colspan="7" style="text-align: center;">Loading users...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = '../php/api.php';
+
+        const form           = document.getElementById('userCrudForm');
+        const userIdField    = document.getElementById('user_id');
+        const nameField      = document.getElementById('name');
+        const usernameField  = document.getElementById('username');
+        const emailField     = document.getElementById('email');
+        const roleField      = document.getElementById('role');
+        const passwordField  = document.getElementById('password');
+        const passwordLabel  = document.getElementById('passwordLabel');
+        const formTitle      = document.getElementById('formTitle');
+        const submitBtn      = document.getElementById('submitBtn');
+        const cancelBtn      = document.getElementById('cancelBtn');
+        const tableBody      = document.getElementById('userTableBody');
+        const alertBox       = document.getElementById('alertBox');
+
+        function showAlert(msg, isSuccess = true) {
+            alertBox.textContent = msg;
+            alertBox.className = 'alert-box ' + (isSuccess ? 'alert-success' : 'alert-error');
+            alertBox.style.display = 'block';
+            setTimeout(() => { alertBox.style.display = 'none'; }, 3500);
+        }
+
+        // ==========================================
+        // 1. FETCH & DISPLAY USERS (GET)
+        // ==========================================
+        async function loadUsers() {
+            try {
+                const response = await fetch(API_URL + '?t=' + new Date().getTime());
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    renderTable(result.data);
+                } else {
+                    showAlert(result.message || "Failed to load users.", false);
+                }
+            } catch (err) {
+                console.error("Fetch Error:", err);
+                tableBody.innerHTML = '<tr><td colspan="7" style="text-align:center; color:#ef4444;">Unable to connect to users API.</td></tr>';
+            }
+        }
+
+        function renderTable(users) {
+            if (!users || users.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="7" style="text-align:center; color:#64748b;">No users found in the database.</td></tr>';
+                return;
+            }
+
+            tableBody.innerHTML = users.map(u => `
+                <tr id="user-row-${u.id}">
+                    <td>${u.id}</td>
+                    <td><strong>${escapeHtml(u.name)}</strong></td>
+                    <td>${escapeHtml(u.username)}</td>
+                    <td>${escapeHtml(u.email)}</td>
+                    <td><span class="badge badge-${escapeHtml(u.role)}">${escapeHtml(u.role)}</span></td>
+                    <td>${escapeHtml(u.created_at || 'Recently')}</td>
+                    <td>
+                        <button class="btn-edit" onclick="populateEditForm(${u.id})">Edit</button>
+                        <button class="btn-del" onclick="deleteUserRecord(${u.id}, '${escapeHtml(u.username)}')">Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // ==========================================
+        // 2. ADD / UPDATE USER (POST / PUT)
+        // ==========================================
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const isEdit = userIdField.value !== "";
+            const method = isEdit ? 'PUT' : 'POST';
+
+            const payload = {
+                name: nameField.value.trim(),
+                username: usernameField.value.trim(),
+                email: emailField.value.trim(),
+                role: roleField.value,
+                password: passwordField.value
+            };
+
+            if (isEdit) {
+                payload.id = parseInt(userIdField.value, 10);
+            } else if (!payload.password || payload.password.length < 6) {
+                showAlert("Password is required and must be at least 6 characters.", false);
+                return;
+            }
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    showAlert(result.message, true);
+                    resetFormState();
+                    loadUsers();
+                } else {
+                    showAlert(result.message || "Operation failed", false);
+                }
+            } catch (err) {
+                showAlert("Error submitting data to server.", false);
+            }
+        });
+
+        // ==========================================
+        // 3. EDIT POPULATION
+        // ==========================================
+        window.populateEditForm = async function(id) {
+            try {
+                const response = await fetch(`${API_URL}?id=${id}`);
+                const result = await response.json();
+
+                if (result.status === 'success' && result.data) {
+                    const u = result.data;
+                    userIdField.value   = u.id;
+                    nameField.value     = u.name;
+                    usernameField.value = u.username;
+                    emailField.value    = u.email;
+                    roleField.value     = u.role;
+                    passwordField.value = ""; // Leave blank unless changing
+
+                    formTitle.textContent     = `Edit User (#${u.id} - ${u.username})`;
+                    passwordLabel.textContent = "New Password (leave blank to keep current)";
+                    passwordField.required    = false;
+                    submitBtn.textContent     = 'Update User';
+                    cancelBtn.style.display   = 'inline-block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            } catch (err) {
+                showAlert("Could not retrieve user details for editing.", false);
+            }
+        };
+
+        function resetFormState() {
+            userIdField.value = "";
+            form.reset();
+            formTitle.textContent     = 'Add New System User';
+            passwordLabel.textContent = "Password (min 6 characters) *";
+            passwordField.required    = true;
+            submitBtn.textContent     = 'Save User';
+            cancelBtn.style.display   = 'none';
+        }
+        cancelBtn.addEventListener('click', resetFormState);
+
+        // ==========================================
+        // 4. DELETE USER (DELETE)
+        // ==========================================
+        window.deleteUserRecord = async function(id, username) {
+            if (!confirm(`Are you sure you want to delete user "${username}" (ID #${id})?`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: id })
+                });
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    showAlert(result.message, true);
+                    loadUsers();
+                } else {
+                    showAlert(result.message || "Failed to delete user.", false);
+                }
+            } catch (err) {
+                showAlert("Error sending delete request.", false);
+            }
+        };
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str).replace(/[&<>'"]/g, tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag] || tag));
+        }
+
+        // Initial load
+        loadUsers();
+    </script>
+</body>
+</html>

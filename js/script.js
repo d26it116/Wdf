@@ -456,12 +456,11 @@ if (form) {
 
         });
 
-        
 
         if (!hasError) {
 
             document.getElementById("successMessage").textContent =
-                "Registration Successful!!!!!!!!";
+                "Registration Successful!";
 
         }
 
@@ -490,7 +489,7 @@ const faqBox = document.getElementById("faqContainer");
 
 if (faqBox) {
 
-    fetch("../data/faqs.json")
+    fetch("../Data/faqs.json")
         .then(response => response.json())
         .then(data => {
 
@@ -592,7 +591,7 @@ if (eventBox) {
 
     // Load JSON
 
-    fetch("../data/event.json")
+    fetch("../php/get_events.php")
 
         .then(response => response.json())
 
@@ -688,37 +687,21 @@ if (eventBox) {
         }
 
 
-        data.forEach(event => {
+    data.forEach(event => {
+            const posterHtml = event.poster 
+                ? `<div style="margin-bottom:10px;"><img src="../uploads/events/${event.poster}" alt="${event.name}" style="width:100%; max-height:160px; object-fit:cover; border-radius:6px;"></div>` 
+                : '';
 
             eventBox.innerHTML += `
-
                 <article class="event-card">
-
+                    ${posterHtml}
                     <h3>${event.name}</h3>
-
-                    <p>
-                        <strong>Category:</strong>
-                        ${event.category}
-                    </p>
-
-                    <p>
-                        <strong>Date:</strong>
-                        ${event.date}
-                    </p>
-
-                    <p>
-                        <strong>Location:</strong>
-                        ${event.location}
-                    </p>
-
-                    <button type="button">
-                        View Event
-                    </button>
-
+                    <p><strong>Category:</strong> ${event.category}</p>
+                    <p><strong>Date:</strong> ${event.date}</p>
+                    <p><strong>Location:</strong> ${event.location}</p>
+                    <button type="button">View Event</button>
                 </article>
-
             `;
-
         });
 
 

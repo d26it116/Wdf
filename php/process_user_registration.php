@@ -68,12 +68,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //[cite: 6]
         $hashed_password
     );
 
-    if ($stmt->execute()) { //[cite: 6]
-        echo "<h2>Registration Successful!</h2>"; //[cite: 6]
-        echo "<p>User has been registered securely as <strong>" . htmlspecialchars(ucfirst($role)) . "</strong> using MySQLi.</p>"; //[cite: 6]
-        echo "<a href='../pages/register_user.html'>Register Another User</a>"; //[cite: 6]
+    if ($stmt->execute()) {
+        // Option A: Automatically log the user in immediately after registering
+        session_start();
+        session_regenerate_id(true);
+
+        $_SESSION['user_id']       = $stmt->insert_id;
+        $_SESSION['username']      = $username;
+        $_SESSION['name']          = $name;
+        $_SESSION['role']          = $role;
+        $_SESSION['last_activity'] = time();
+
+        // Redirect directly to your website home page
+        header("Location: ../Pages/index.html");
+        exit();
     } else {
-        echo "Registration failed: " . $stmt->error; //[cite: 6]
+        echo "Registration failed: " . $stmt->error;
     }
 
     $stmt->close(); //[cite: 6]

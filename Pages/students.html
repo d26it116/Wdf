@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Registered Students</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Registered Students</h1>
+    </header>
+
+    <main>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Course</th>
+                    <th>Year</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable">
+                <tr>
+                    <td colspan="7">Loading...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            <a href="register.html">Back to Registration</a>
+        </p>
+
+    </main>
+
+    <script>
+
+    fetch("../Data/students.json?time=" + new Date().getTime())
+
+        .then(response => response.json())
+
+        .then(students => {
+
+            let table = document.getElementById("studentTable");
+
+            table.innerHTML = "";
+
+            students.forEach((student, index) => {
+
+                table.innerHTML += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${student.name}</td>
+                        <td>${student.email}</td>
+                        <td>${student.mobile || ""}</td>
+                        <td>${student.course}</td>
+                        <td>${student.year}</td>
+                        <td>${student.gender || ""}</td>
+                    </tr>
+                `;
+
+            });
+
+        })
+
+        .catch(error => {
+
+            document.getElementById("studentTable").innerHTML = `
+                <tr>
+                    <td colspan="7">Unable to load student data.</td>
+                </tr>
+            `;
+
+            console.log(error);
+
+        });
+
+</script>
+
+</body>
+
+</html>
+

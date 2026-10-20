@@ -77,7 +77,7 @@ if ($message != "") {
 
         $courseQuery = $pdo->query(
             "SELECT course_id, course_name FROM courses"
-        );
+        );  
 
         while ($course = $courseQuery->fetch(PDO::FETCH_ASSOC)) {
 
